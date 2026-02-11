@@ -80,6 +80,31 @@ function createHeart() {
 }
 setInterval(createHeart, 300);
 </script>
+<script>
+function aceptar(){
+  document.getElementById("respuesta").style.display = "block";
+}
 
+// Corazones cayendo
+for (let i = 0; i < 25; i++) {
+  let h = document.createElement("div");
+  h.innerHTML = "❤️";
+  h.style.position = "fixed";
+  h.style.left = Math.random() * 100 + "vw";
+  h.style.top = "-10px";
+  h.style.fontSize = "24px";
+  h.style.animation = "caer " + (Math.random() * 3 + 3) + "s linear infinite";
+  document.body.appendChild(h);
+}
+</script>
+
+<style>
+@keyframes caer {
+  from { transform: translateY(-10vh); }
+  to { transform: translateY(110vh); }
+}
+</style>
+  
+  
 </body>
 </html>
